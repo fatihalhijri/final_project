@@ -43,9 +43,6 @@ void judul() {
     cout << "=====================================\n";
 }
 
-/* =======================
-   MENU LOGIN
-======================= */
 void menuLogin() {
     cout << "\n1. Register\n";
     cout << "2. Login\n";
@@ -53,9 +50,6 @@ void menuLogin() {
     cout << "Pilih menu: ";
 }
 
-/* =======================
-   FUNCTION REGISTER
-======================= */
 void registerUser() {
     if (jumlahUser == 5) {
         cout << "User penuh!\n";
@@ -74,9 +68,7 @@ void registerUser() {
     cout << "\n ===================\n";
 }
 
-/* =======================
-   FUNCTION LOGIN
-======================= */
+
 bool loginUser() {
     string user, pass;
     cout << "\n=== LOGIN ===\n";
@@ -96,9 +88,7 @@ bool loginUser() {
     return false;
 }
 
-/* =======================
-   MENU TO DO LIST
-======================= */
+
 void menuTodo() {
     cout << "\n===== TO DO LIST =====\n";
     cout << "1. Tambah Tugas\n";
@@ -109,9 +99,7 @@ void menuTodo() {
     cout << "Pilih menu: ";
 }
 
-/* =======================
-   TAMBAH TUGAS
-======================= */
+
 void tambahTugas() {
     if (jumlahTugas == 10) {
         cout << "Tugas penuh!\n";
@@ -128,9 +116,7 @@ void tambahTugas() {
     cout << "Tugas berhasil ditambahkan!\n";
 }
 
-/* =======================
-   LIHAT TUGAS
-======================= */
+
 void lihatTugas() {
     if (jumlahTugas == 0) {
         cout << "Belum ada tugas.\n";
@@ -144,9 +130,7 @@ void lihatTugas() {
     }
 }
 
-/* =======================
-   TANDAI SELESAI
-======================= */
+
 void tandaiSelesai() {
     int nomor;
     lihatTugas();
@@ -162,9 +146,7 @@ void tandaiSelesai() {
     }
 }
 
-/* =======================
-   HAPUS TUGAS
-======================= */
+
 void hapusTugas() {
     int nomor;
     lihatTugas();
@@ -186,9 +168,7 @@ void hapusTugas() {
     cout << "Tugas berhasil dihapus!\n";
 }
 
-/* =======================
-   MAIN FUNCTION
-======================= */
+
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     int pilih;
