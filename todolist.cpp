@@ -8,23 +8,16 @@ bool validPanjang(string teks) {
     return teks.length() >= 4;
 }
 
-/* =======================
-   DATA LOGIN (ARRAY)
-======================= */
 string username[10];
 string password[10];
 int jumlahUser = 0;
 
-/* =======================
-   DATA TO DO LIST
-======================= */
+
 string tugas[10];
 string statusTugas[10];
 int jumlahTugas = 0;
 
-/* =======================
-   FUNCTION ASCII TITLE
-======================= */
+
 void judulTodo() {
     cout << "████████╗ ██████╗     ██████╗  ██████╗     ██╗     ██╗███████╗████████╗\n";
     cout << "╚══██╔══╝██╔═══██╗    ██╔══██╗██╔═══██╗    ██║     ██║██╔════╝╚══██╔══╝\n";
@@ -34,11 +27,14 @@ void judulTodo() {
     cout << "   ╚═╝    ╚═════╝     ╚═════╝  ╚═════╝     ╚══════╝╚═╝╚══════╝   ╚═╝   \n";
 }
 
+void clearScreen() {
+    system("cls");
+}
+
 
 void judul() {
     cout << "=====================================\n";
     cout << "FINAL PROJECT C++\n";
-    // cout << "          TO DO LIST\n";
     judulTodo();
     cout << "=====================================\n";
 }
@@ -173,13 +169,14 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     int pilih;
     bool login = false;
-
+    clearScreen();
     judul();
 
     do {
         menuLogin();
         cin >> pilih;
 
+        clearScreen();
         if (pilih == 1) {
             registerUser();
         } 
@@ -188,8 +185,13 @@ int main() {
             if (login) {
                 int menuTodoPilihan;
                 do {
+                    cout << endl;
+                    system("pause"); 
+                    clearScreen();
                     menuTodo();
                     cin >> menuTodoPilihan;
+                    
+                    clearScreen();
 
                     if (menuTodoPilihan == 1) tambahTugas();
                     else if (menuTodoPilihan == 2) lihatTugas();
