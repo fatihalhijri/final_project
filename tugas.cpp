@@ -3,18 +3,15 @@
 #include <string>
 using namespace std;
 
-
 string username[10];
 string password[10];
 int jumlahUser = 0;
 
-
-string tugas[10];       
-string statusTugas[10]; 
-string kategori[10];    
-int prioritas[10];     
+string tugas[10];
+string statusTugas[10];
+string kategori[10];
+int prioritas[10];
 int jumlahTugas = 0;
-
 
 void clearScreen()
 {
@@ -39,7 +36,6 @@ void judul()
     cout << "=====================================\n";
 }
 
-
 void menuLogin()
 {
     cout << "\n1. Register\n";
@@ -47,7 +43,6 @@ void menuLogin()
     cout << "0. Keluar\n";
     cout << "Pilih menu: ";
 }
-
 
 void registerUser()
 {
@@ -66,7 +61,6 @@ void registerUser()
     jumlahUser++;
     cout << "\nRegister berhasil! Silakan login.\n";
 }
-
 
 bool loginUser()
 {
@@ -90,7 +84,6 @@ bool loginUser()
     return false;
 }
 
-
 void menuTodo()
 {
     cout << "\n===== TO DO LIST =====\n";
@@ -104,8 +97,6 @@ void menuTodo()
     cout << "0. Logout\n";
     cout << "Pilih menu: ";
 }
-
-
 
 void tambahTugas()
 {
@@ -133,7 +124,7 @@ pilih_kategori:
     {
         cin.clear();
         cin.ignore(1000, '\n');
-        cout << "Input harus angka 1-3! Kembali ke menu tambah tugas.\n";
+        cout << "Input harus angka 1-3! Pilih Kembali ke menu tambah tugas.\n";
         goto pilih_kategori;
     }
 
@@ -188,7 +179,6 @@ pilih_prioritas:
     cout << "\nTugas berhasil ditambahkan!\n";
 }
 
-
 void lihatTugas()
 {
     if (jumlahTugas == 0)
@@ -206,7 +196,6 @@ void lihatTugas()
              << "] [Prioritas: " << prioritas[i] << "]\n";
     }
 }
-
 
 void lihatTugasBelumSelesai()
 {
@@ -228,7 +217,6 @@ void lihatTugasBelumSelesai()
     }
 }
 
-
 void lihatTugasSelesai()
 {
     bool ada = false;
@@ -248,7 +236,6 @@ void lihatTugasSelesai()
         cout << "Tidak ada tugas yang sudah selesai.\n";
     }
 }
-
 
 void tandaiSelesai()
 {
