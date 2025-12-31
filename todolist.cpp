@@ -395,7 +395,7 @@ pilih_nomor:
     if (ubahPrioritas == 'y' || ubahPrioritas == 'Y')
     {
 
-    pilih_prioritas_edit:
+        pilih_prioritas_edit:
         int pilihPrioritas;
         cout << "\nPilih prioritas baru:\n";
         cout << "1. Rendah\n";
